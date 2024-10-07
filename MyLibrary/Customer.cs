@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyLibrary
 {
-    internal class Customer
+    public class Customer
     {
         public String FirstName { get; set; }
         public String LastName { get; set; }

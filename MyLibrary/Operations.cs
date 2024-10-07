@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,5 +23,23 @@ namespace MyLibrary
         {
             return number1 + number2;
         }
+
+        public IList<int> GetEvenNumbers(int start, int end)
+        {
+            //List<int> evenNumbers = new List<int>();
+            //for (int i = start; i <= end; i++)
+            //{
+            //    if (i % 2 == 0)
+            //    {
+            //        evenNumbers.Add(i);
+            //    }
+
+            //}
+            //return evenNumbers;
+
+            return Enumerable.Range(start, end)
+                .Where(IsEven)
+                .ToList();
+        }  
     }
 }
