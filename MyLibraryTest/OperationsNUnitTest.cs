@@ -58,7 +58,23 @@ namespace MyLibrary
             
             Assert.That(result, Is.EqualTo(3.4).Within(0.1));
 
+        }
 
+        public void GetEvenNumbers_InputRange_ReturnEvenNumbers()
+        {
+            //1. Arrange
+            Operations operations = new();
+            int start = 0;
+            int end = 10;
+
+            //2. Act 
+            var result = operations.GetEvenNumbers(start, end);
+
+            //3. Assert
+
+            Assert.That(result, Is.Not.Empty);
+            Assert.That(result.Count, Is.EqualTo(5));
+            Assert.That(result, Has.Exactly(5).Items);
 
         }
     }
